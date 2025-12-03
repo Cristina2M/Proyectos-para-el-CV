@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzle de Imagen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #222;
+            color: white;
+        }
+
+        #tablero {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            gap: 2px;
+            background-color: #000;
+            padding: 5px;
+            border: 2px solid #555;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .casilla {
+            width: 100px;
+            height: 100px;
+            background-image: url('Grib_skov.jpg');
+            background-size: 400px 400px;
+            /* Forzamos que la imagen ocupe todo el tablero */
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .casilla:hover {
+            opacity: 0.9;
+            transform: scale(0.98);
+        }
+
+        .vacia {
+            background-image: none;
+            background-color: #111;
+            cursor: default;
+        }
+
+        .vacia:hover {
+            opacity: 1;
+            transform: none;
+        }
+
+        #mensaje {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #4CAF50;
+            font-weight: bold;
+            height: 30px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Puzle de Imagen</h1>
+    <div id="tablero"></div>
+    <div id="mensaje"></div>
+    <button onclick="location.reload()">Reiniciar</button>
+    <script src="main.js"></script>
+</body>
+
+</html>
