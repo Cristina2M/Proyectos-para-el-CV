@@ -1,0 +1,393 @@
+/* FUENTES */
+@font-face {
+    font-family: "nervis";
+    src: url(assets/fonts/nevis.eot) format("embedded-opentype"), url(assets/fonts/nevis.svg) format("svg"), url(assets/fonts/nevis.ttf) format("truetype"), url(assets/fonts/nevis.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "fajala";
+    src: url(assets/fonts/FjallaOne-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "icon";
+    src: url(assets/fonts/websymbols-regular-webfont.eot) format("embedded-opentype"), url(assets/fonts/websymbols-regular-webfont.svg) format("svg"), url(assets/fonts/websymbols-regular-webfont.ttf) format("truetype"), url(assets/fonts/websymbols-regular-webfont.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+/* ESTILOS GENERALES */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(assets/img/paven.png);
+}
+
+
+
+
+/* CABECERA */
+
+#header {
+    min-width: 1024px;
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+}
+
+
+#header a {
+    text-decoration: none;
+    color: #70b231;
+}
+
+
+#header #logotipo {
+    width: 720px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+
+#header #logotipo img {
+    display: block;
+    width: 140px;
+    margin: 0px auto;
+}
+
+
+#header h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: "nervis";
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    text-shadow: 0px 2px 1px #333;
+}
+
+
+
+
+/* BARRA DE NAVEGACIÓN */
+
+#nav {
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+#nav ul {
+    list-style: none;
+    width: 1090px;
+    margin: 0px auto;
+}
+
+#nav >ul >li {
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid gray;
+    position: relative;
+}
+
+#nav >ul > li >a {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#nav >ul >li >a:first-child {
+        border-left: 1px solid gray;
+}
+
+#nav >ul >li:hover {
+    background-color: #70b231;
+    box-shadow: 0px 0px 4px green inset;
+}
+
+#nav >ul >li >ul {
+    width: 160px;
+    position: absolute;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
+    display: none;
+}
+
+#nav >ul >li:hover >ul {
+    display: block;
+}
+
+#nav >ul >li:hover >ul >li {
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+}
+
+#nav >ul >li:hover >ul >li a{
+    text-decoration: none;
+    color: #666;
+}
+
+#nav >ul >li:hover >ul >li:hover {
+    background-color: #ede7e7;
+    box-shadow: 0px 0px 6px #ccc inset;
+}
+
+
+
+
+
+/* CONTENIDO */
+#content {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1250px;
+    min-height: 1100px;
+    margin: 0px auto;
+}
+
+
+/* BARRA LATERAL */
+#aside, #frase {
+    width: 200px;
+    float: left;
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    /* text-align: center; */
+}
+
+#frase {
+    /* clear: both; */
+    width: 200px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#aside .widget {
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-bottom: 1px dashed #333;
+}
+
+
+#aside .widget:last-child {
+    margin-bottom: 20px;
+}
+
+#aside h3 {
+    display: block;
+    width: 100%;
+    color: #333;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    background-color: #f2f1f0;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+}
+
+input[type="text"], input[type="password"] {
+    background-color: white;
+    box-shadow: 0px 0px 2px #ccc inset;
+    border: 1px solid #c9c9c9;
+    padding: 2px 1px;
+    /* color: gray; */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    color: black;
+    /* outline: none; */
+    border-radius: 2px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 60px;
+    border-radius: 2px;
+    border: 1px solid green;
+    color: white;
+    background-color: #70b231;
+    cursor: pointer;
+    padding: 3px;
+    margin: 0px auto;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0px 0px 2px gray;
+}
+
+input[type="submit"]:active {
+    text-shadow: 0px 0px 1px #ccc;
+}
+
+#aside div label, #aside div input[type="text"], #aside div input[type="password"], #aside div a {
+    display: block;
+    width: 95%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#aside input, #aside label {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#aside div input[type="submit"] {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #529125;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #529125;
+}
+
+a:hover {
+    color: #285616;
+}
+
+.red{
+    color: #9b2422 !important;
+}
+
+.blue{
+    color: blue !important;
+}
+
+.orange{
+    color: orange !important;
+}
+
+#aside li {
+    list-style: square;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+
+
+
+/* SECCIONES */
+
+#sections {
+    float: right;
+    width: 75%;
+    font-family: sans-serif;
+    margin-right: 20px;
+}
+
+#sections .titulo {
+    font-family: "fajala";
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: -20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#sections section {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    font-size: 16px;
+    position: relative;
+}
+
+#sections .article {
+    margin: 20px 10px;
+}
+
+#sections .date {
+    color: gray;
+    font-size: 14px;
+}
+
+#sections .stickerOne, #sections .stickerTwo {
+    position: absolute;
+    margin-top: -38px;
+}
+
+#sections .stickerTwo {
+    left: 880px;
+}
+
+.icon {
+    font-family: "icon";
+    margin-right: 5px;
+    color: black;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#history {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
